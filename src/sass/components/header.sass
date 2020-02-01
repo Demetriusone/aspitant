@@ -1,0 +1,16 @@
+@import ../helpers/all
+
+.header
+    $parent: &
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 100
+    transition: .3s ease-in-out
+    &.is-fixed
+        transform: translateY(-70px)
+    &__contact
+        padding: 15px 0
+        &-container
+      

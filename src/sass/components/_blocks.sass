@@ -1,0 +1,62 @@
+.contact-block
+    $parent: &
+    display: flex
+    align-items: center 
+    line-height: 1
+    &_header
+        padding: 0 10px 0 20px 
+        justify-content: space-between
+        +sm
+            padding: 0
+    &_footer
+        flex: 0 1 766px
+        justify-content: space-between
+        +xs
+            flex-direction: columns
+            flex: 0 1 auto
+            width: 100%
+    &__link
+        display: flex
+        align-items: inherit
+        font-size: 14px
+        color: $color3
+        transition: .3s ease-in-out
+        +sm
+            font-size: 12px
+        &:hover
+            color: $color5
+            svg
+                fill: $color5
+        #{$parent}_footer &
+            color: $white
+            &:hover
+                color: $color5
+            &:not(:last-child)
+                +xs
+                    margin-bottom: 15px
+        svg
+            margin-right: 9px 
+            fill: currentColor
+            font-size: 11px
+            transition: .3s ease-in-out 
+    &__social
+        &-links
+            +f('gp500')
+            #{$parent}_header &
+                font-size: 12px
+                +xs
+                    display: none
+            #{$parent}_footer &
+                font-size: 14px
+                +sm
+                    display: none
+                +xs
+                    display: block
+                    margin-bottom: 15px
+        &-icons
+            #{$parent}_header &
+                +xs
+                    display: none
+            #{$parent}_footer &    
+                
+                       
