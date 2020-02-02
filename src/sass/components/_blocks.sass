@@ -27,6 +27,10 @@
             color: $color5
             svg
                 fill: $color5
+        #{$parent}_header &
+            &:nth-child(4)
+                display: none
+                
         #{$parent}_footer &
             color: $white
             &:hover
@@ -58,5 +62,47 @@
                 +xs
                     display: none
             #{$parent}_footer &    
+
+        &-link
+            display: inline-block
+            vertical-align: middle
+            text-shadow: 0 0 20px rgba(104, 193, 221, 0.2)
+            color: $color5
+            line-height: 10px
+            transition: .3s ease-in-out
+            &:not(:last-child)
+                margin-right: 46px
+                +sm
+                    margin-right: 6px
+                +xs
+                    margin-right: 15px
+            &:hover
+                transform: translateY(-5px)
+        &-icon
+            display: inline-block
+            vertical-align: middle
+            transition: .3s ease-in-out
+            font-size: 12px
+            #{$parent}_footer & 
+                &:not(:last-child)
+                    margin-right: 25px
+            &:hover
+                transform: translateY(-5px)
+            svg
+                fill: $color5
+    &__btn
+        flex: 0 1 210px
+        max-width: 210px
+        color: #fff
+        font-size: 14px
+        +sm
+            max-width: none
+        +xs
+            flex: 0 1 140px
+            padding: 12px 15px 10px
+
+                
+
+
                 
                        

@@ -25,3 +25,26 @@ body
    margin: 0 -15px
 .main
    overflow: hidden
+.section-title
+   $parent: & 
+   position: relative
+   padding-bottom: 20px
+   +xs
+      padding-bottom: 15px
+   &_left
+      text-align: left
+      &::after
+         left: 0
+   &_center
+      text-align: center
+      &::after
+         left: 50%
+         margin-left: -25px
+   &::after
+      position: absolute
+      bottom: 0
+      width: 50px
+      height: 2px
+      background-color: $color5
+      content: ""
+         

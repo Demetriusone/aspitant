@@ -18,5 +18,30 @@
                 +e.A.link(href="mailto:info@shl-testing.ru")
                     +i('mail') 
                     | info@shl-testing.ru
-                +btn('b', 'Написать нам', '_type-1','write-us')     
+                +btn('b', 'Написать нам', '_type-1','write-us')  
+    +e.line
+        +e.line-container.container
+            +e.A.logo(href="!#")
+                img(src="img/other/logo.png", alt="logo") 
+                +e.H1.logo-title Аспирант
+            +e.NAV.nav
+                -
+                    navList = [
+                        ['О нас', "about"],
+                        ['Улслуги и цены','services'],
+                        ['Как мы работаем','How-to'],
+                        ['Обучение','train'],
+                        ['Отзывы','testimonials'],
+                        ['Контакты','contacts']
+                    ]
+                +e.UL.nav-list
+                    for navLink in navList 
+                        li: a(href=`#${navLink[1]}`)
+                            span= navLink[0]
+                            span= navLink[0]
+                +e.BUTTON.nav-btn(type="button")
+                    +e.SPAN.nav-btn-burger
+                        +e.SPAN.nav-btn-lines
+
+
 //end header
