@@ -47,4 +47,90 @@ body
       height: 2px
       background-color: $color5
       content: ""
+
+   &__label
+      +f('gp700',12,12)
+      letter-spacing: 2.4px
+      color: $color3
+      text-transform: uppercase 
+   &__text 
+      +f('ex700',34,36)
+      color: $color4
+      +xs
+         font-size: 30px
+         line-height: 32px
+      #{$parent}_white &
+         color: #fff
+      #{$parent}_md &
+         font-size: 36px
+         +xs
+            font-size: 30px
+   &__icon
+      position: absolute
+      top: 27px
+      z-index: -1
+      transform: rotate(-7deg)
+      margin-left: -40px
+      width: 40px
+      height: 40px
+      fill: rgba(#d2c8ec,.3)
+      #{$parent}_center &
+         left: 50%
+      #{$parent}_left &
+         left: 30px
+
+.btn
+   position: relative
+   display: inline-block
+   padding: 14px 50px 13px
+   outline: 0
+   border-radius: 50px
+   transition: .3s ease-in-out
+   +f('gp400',16)
+   line-height: 1.2
+   color: #fff
+   &::after
+      +coverdiv
+      transform: translate(8px,5px)
+      border-radius: 50px
+      transition: .3s ease-in-out
+      pointer-events: none
+      content: " "
+   &::hover
+      background-color: $color6
+      &::after
+         transform: translate(0)
+   &__icon
+      &-circle
+         position: absolute
+         top: 50%
+         right: 20px
+         display: flex
+         justify-content: center 
+         align-items: center 
+         width: 22px
+         height: 22px
+         margin-top: -11px
+         background-color: rgba($white, .3)
+         border-radius: 50%
+   &_type-1
+      padding: 12px 44px 10px
+      box-shadow: 0 15px 40px rgba(18, 3, 58, 0.15)
+      border: 1px solid #fff
+      &::after
+         content: ''
+         border: 1px solid rgba($white, .15)
+      &:hover
+         border-color: rgba($white,.6)
+         &::after
+            border-color: transparent 
+
+
+
+
+
+
+
+
+   
          

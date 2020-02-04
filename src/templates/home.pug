@@ -4,5 +4,35 @@ block variables
 	-title = 'Главная1'
 
 block content
-	h1 Wellcome to start teamplate2
+	//begin main
+	main.main
+
+		//begin screen
+		+b.SECTION.screen
+			+e.IMG.decor._1.decor-img(src="./img/decor/decor_1.svg" alt="img")
+			+e.IMG.decor._2.decor-img(src="./img/decor/decor_2.svg" alt="img")
+			+e.container.container
+				+e.triangle.triangle
+				+e.inner
+					+e.titles-wrap
+						+i('decor-triangle', 'screen__decor-triangle')
+						+e.H2.title Shl
+						+e.H4.sub-title test
+					+e.descr
+						+e.P.descr-text Проходим SHL и другие тесты при устройстве на работу Online на
+							+e.SPAN.descr-text-mark._color1 русском
+							= ' '
+							| и
+							+e.SPAN.descrt-text-mark._color2 английском
+							= ' '
+							| языке без предоплаты
+						+e.A.descr-btn.btn._type-4(href="!#") Как сдать тест?
+							.btn__icon-circle
+								+i('triangle-play')
+		// end screen
+
+					
+					
+
+	
 
