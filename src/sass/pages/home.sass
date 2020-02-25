@@ -1,0 +1,156 @@
+// *** begin screen *** // 
+.screen
+    position: relative
+    display: flex
+    height: 98vh
+    padding-top: 140px
+    color: #fff
+    +rmin (1921)
+        height: 100vh
+    +sm
+        height: 100vh
+    +xs
+        height: 100vh
+        padding-top: 130px
+    +mob-fix
+        height: 170vh
+    &__decor
+        top: 0
+        left: 0
+        width: 100%
+        &_1
+            top: -28px
+            height: 100%
+            z-index: -1
+            filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.2))
+            object-fit: cover
+            font-family: 'object-fit: cover;'
+            +xs
+                height: 120%
+            .is-ie &
+                height: 112%
+        &_2
+            z-index: -2
+            +sm
+                top: 50%
+            +xs
+                top: 35%
+                height: 100%
+    &__container
+        display: flex
+        flex-direction: column
+        justify-content: center
+        height: 73.5%
+        +xs
+            height: 100%
+    &__inner
+        display: flex
+        align-items: center
+        justify-content: center 
+        max-width: 1006px
+        padding-left: 25px
+        +sm
+            padding-left: 0
+        +xs
+            flex-direction: column
+    &__decor-triangle
+        position: absolute
+        top: -60%
+        left: -13%
+        z-index: -1
+        width: 452px
+        height: 434px
+        fill: #7352c5
+        +sm
+            top: -50%
+            left: -15%
+            width: 412px
+            height: 374px
+        +xs
+            height: 260px
+            left: 50%
+            transform: translateX(-50%)
+            width: auto
+    &__titles-wrap
+        position: relative
+        flex: 0 1 400px 
+        max-width: 400px
+        padding-right: 90px
+        text-transform: uppercase
+        +sm
+            max-width: none
+            flex: 0 1 370px
+        +xs
+            flex: 0 1 auto
+            margin-bottom: 30px
+            padding: 0 0 5px
+        &::after
+            position: absolute
+            top: 58px
+            right: 0
+            width: 73px
+            height: 6px
+            background-color: $color5
+            content: ""
+            +sm
+                right: 20px
+            +xs
+                height: 3px
+                width: 108px
+                top: 100%
+                right: 12px
+    &__title
+        margin-bottom: 20px
+        +f('gp700', 150, 150)
+        +sm
+            font-size: 120px
+            line-height: 120px
+        +xs
+            font-size: 80px
+            line-height: 60px
+    &__sub-title
+        font-size: 60px
+        text-align: right
+        letter-spacing: 12px
+        +sm
+            font-size: 44px
+        +xs
+            font-size: 28px
+    &__descr
+        flex: 0 1 calc(100% - 400px)
+        padding-left: 35px
+        +md
+            padding-left: 23px
+            flex: 0 1 calc(100% - 370px)
+            max-width: none
+        +xs
+            flex: 0 1 auto
+            padding-left: 0
+        .is-ie &
+            max-width: 588px
+        &-text
+            margin-bottom: 31px
+            font-size: 26px
+            line-height: 40px
+            +sm
+                font-size: 20px
+                line-height: 30px
+            +xs
+                margin-bottom: 20px
+                font-size: 15px
+                line-height: 22px
+            &-mark
+                +f('gp500')
+                &_color1
+                    color: #fe77af
+                &_color2
+                    color: #ffbd6a
+            &-btn
+//end screen //
+
+
+
+              
+
+
+        

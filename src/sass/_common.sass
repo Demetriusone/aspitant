@@ -124,13 +124,30 @@ body
          border-color: rgba($white,.6)
          &::after
             border-color: transparent 
+   &_type-4
+      position: relative
+      padding: 16px 61px 15px 33px
+      box-shadow:  0 15px 40px rgba(18, 3, 58, 0.15), 0 0 20px rgba(104, 193 ,221, 0.2) 
+      background-color: $color5
+      +f('gp700',16)
+      &:hover
+         background-color: darken($color5,15)
+      &::after
+         display: none
+      
+      svg
+         width: 8px
+         height: 8px
+         fill: $white
 
 
 
 
 
 
-
+.decor-img
+   position: absolute
+   z-index: -1
 
    
          
