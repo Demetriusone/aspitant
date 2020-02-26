@@ -147,6 +147,44 @@
                     color: #ffbd6a
             &-btn
 //end screen //
+//***begin about*** //
+.about
+    margin: -100px 0 0 
+    padding: 50px 0 15px
+    background: no-repeat 38% 36%
+    background-size: auto
+    +sm
+        margin: 0
+    &__container
+        display: flex
+        align-items: center
+        justify-content: space-between
+        +xs
+            flex-direction: column
+    &__text
+        flex: 0 1 percentage(680 / 1140)
+        margin-top: -30px
+        +xs
+            flex: 0 1 auto
+            width: 100%
+            margin: 0 0 20px
+    &__title
+        max-width: 600px
+        margin-bottom: 45px
+    &__descr
+        p
+            &:not(:last-child)
+                margin-bottom: 20px
+    &__img
+        flex: 0 1 percentage(496 / 1140)
+        margin-right: -25px
+        +ratio(496,545)
+        +cover
+        +xs
+            width: 100%
+            margin-right: 0
+// end about //
+
 
 
 
