@@ -328,6 +328,100 @@
                 #{$parent}:hover &
                     bottom: 0
                     right: 0
+        &-inner
+            display: flex
+            align-items: center 
+            height: 100%
+            padding: 15px
+            +xs 
+                padding: 10px
+                justify-content: center 
+            #{$parent}_full &
+                padding: 0 0 16px 15px
+                align-items: flex-start
+                +xs
+                    flex-direction: column
+                    padding: 5px
+        &-icon
+            z-index: 2
+            &-wrap 
+                position: relative
+                flex: 0 0 112px 
+                height: 80px
+                +flexCenter
+                +xs 
+                    transform: scale(.7)
+                &::after, &::before
+                    position: absolute
+                    z-index: 1
+                    width: 59px
+                    height: 59px
+                    background-color: #c2c2c2
+                    opacity: 0.1
+                    content: ''
+                    border-radius: 50%
+                &::after
+                    top: 40px
+                    left: 0
+                &::before
+                    bottom: 42px
+                    right: 5px
+                #{$parent}_full &
+                    width: 122px
+                    margin: 78px auto 53px
+        &-text
+            padding-left: 20px
+            margin-top: 5px
+            +xs 
+                padding-left: 5px
+                flex: 1 1 150px
+            #{$parent}_full &
+                padding-left: 0
+            &_has-list
+                padding-left: 10px
+                +xs
+                    padding-left: 5px
+                    flex-shrink: 0
+                    flex-grow: 1
+        &-title
+            margin-bottom: 10px
+            +f('gp700',22)
+            color: $color4
+            +xs
+                font-size: 18px
+                line-height: 20px
+            #{$parent}-text_has-list &
+                padding-left: 10px
+            #{$parent}_full &
+                margin-bottom: 15px
+            span
+                font-size: 18px
+                color: $color2
+        &-price
+            span
+                +f('gp700',18)
+                color: $color2
+        &-list
+            font-size: 14px
+            +xs 
+                font-size: 13px
+        &-actions
+            margin-top: 20px
+            +xs 
+                display: flex
+                flex-direction: column
+                align-items: center
+            &-btn
+                margin-right: 56px
+                padding: 14px 40px 13px
+                +xs
+                    margin: 0 0 40px
+                    padding: 14px 15px 13px
+                    
+            
+
+
+
 
 
 
