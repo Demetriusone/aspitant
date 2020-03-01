@@ -124,6 +124,13 @@ body
          border-color: rgba($white,.6)
          &::after
             border-color: transparent 
+   &_type-3
+      background-color: $color6
+      &:hover
+         background-color: darken($color6, 6)
+      &::after
+         border: 1px solid rgba(#5f3cb7, .15)
+   
    &_type-4
       position: relative
       padding: 16px 61px 15px 33px
@@ -139,6 +146,37 @@ body
          width: 8px
          height: 8px
          fill: $white
+.circled-list
+   li
+      &::before
+         display: inline-block
+         vertical-align: middle
+         background-color: currentColor
+         width: 5px
+         height: 5px
+         margin-right: 5px
+         border-radius: 50%
+         content: ""
+p
+   a
+      color: $color5
+      border-bottom: 1px solid rgba($color5, .6)
+      transition: .3s easy-in-out
+      &:hover
+         border-bottom-color: transparent
+strong
+   +f("gp700")
+.box-block
+   box-shadow: 0 15px 40px rgba(18, 3,58,0.15)
+   border-radius: 4px
+   background-color: #fff
+   font-size: 16px
+   line-height: 24px
+   transition: .3s  ease-in-out
+   &:hover
+      transform: translateY(-10px)
+
+
 
 
 

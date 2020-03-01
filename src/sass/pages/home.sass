@@ -276,25 +276,24 @@
                 flex: 0 1 auto
                 width: 100%
                 padding-left: 0
-
-                &-text
-                    height: 300px
-                    font-size: 18px
-                    line-height: 28px
-                    +md
-                        font-size: 16px
-                        line-height: 26px
-                    p
-                        &:not(:last-child)
-                            margin-bottom: 18px
-                            +md
-                                margin-bottom: 12px
-                    &-inner
-                        padding: 15px 25px 0 0 
+            &-text
+                height: 300px
+                font-size: 18px
+                line-height: 28px
+                +md
+                    font-size: 16px
+                    line-height: 26px
+                p
+                    &:not(:last-child)
+                        margin-bottom: 18px
                         +md
-                            padding: 15px 0 0 
-                        +xs
-                            padding: 0
+                            margin-bottom: 12px
+                &-inner
+                    padding: 15px 25px 0 0 
+                    +md
+                        padding: 15px 0 0 
+                    +xs
+                        padding: 0
                 .mCSB_scrollTools
                     right: -7px
         &-corner
@@ -417,7 +416,65 @@
                 +xs
                     margin: 0 0 40px
                     padding: 14px 15px 13px
-                    
+    &__content
+        position: absolute
+        top: -10px
+        bottom: 0
+        left: 17px 
+        right: 17px
+        z-index: 10
+        height: 445px
+        opacity: 0
+        transform: scale(.8)
+        transition: .3s ease-in-out
+        box-shadow: 0 15px 40px rgba(18, 3, 58, 0.15)
+        border-radius: 4px
+        pointer-events: none
+        +md
+            left: 6%
+            right: 6%
+            top: 50%
+            margin-top: -222px
+            bottom: auto
+        +xs
+           height: auto
+           margin-top: 0
+           top: 0
+           left: 15px
+           right: 15px
+        &.is-active
+            pointer-events: none
+            transform: scale(1)
+            opacity: 1
+            .services__item-inner
+                pointer-events: auto
+        &-close
+            +f('gp400')
+            font-size: 16px
+            line-height: 28px
+            color: $color3
+            transition: .3s ease-in-out
+            &:hover
+                color: $color6
+    &__slider
+        .slider-btn
+            margin-top: -23px
+            +xs
+                margin-top: 0
+                top: calc(100% - 70px)
+            &_prev
+                left: -65px
+                +md
+                    left: -40px
+                +xs
+                    left: 12%
+            &_next
+                right: -65px
+                +md
+                    right: -40px
+                +xs
+                    right: 12%
+// end services // 
             
 
 

@@ -49,7 +49,7 @@ block content
 				+sectTitle('Услуги и цены','Виды и стоимость прохождения SHL тестов', '_center services__title')
 
 				+e.row.row
-					- 
+					-	 
 						servList = [{
 						icon:'numbers',
 						title:'Числовые',
@@ -73,8 +73,7 @@ block content
 						},{
 						icon:'discount',
 						title:'Скидка',
-						list:['При оплате вперед','Обращение с другом'],
-						price: '2000'
+						list:['При оплате вперед','Обращение с другом']
 						}]
 				
 					mixin servItem(item)
@@ -99,11 +98,170 @@ block content
 													li= text 
 					each item in servList 
 						+servItem(item)
-
-							 
-
-					
-					
+					+e.content
+						+e.slider.js-slider
+							+e.item._full.box-block
+								+e.item-corner._top
+								+e.item-corner._bot
+								+e.item-inner
+									+e.item-col
+										+e.item-icon-wrap
+											+e.item-icon.icon-numbers
+										+e.item-text
+											+e.H3.item-title Числовой тест 
+											+e.H5.item-price
+												span 2000 
+												= " "
+												| руб.
+									+e.item-info
+										+e.item-info-text.js-custom-scroll
+											+e.item-info-text-inner
+												p Числовой текст включает в себя вопросы из раздела таких наук как финансовая математика, статистика, экономика, демофграфия.
+												p Числовой тест ограничен во времени и требует быстрого анализа и обработки информации.
+												p Тест бывает адаптивным, и если Вы дали неверный ответ на вопрос , то следующий вопрос будет более легким. Если же вы дали правильный ответ , то следующий вопрос будет более сложнее.
+												p Если вы не уверены в своих силах - обращайтесь за помощью.
+										+e.item-actions
+											+btn('b', 'Заказать прохождение', '_type-3 services__item-actions-btn', 'write-us')
+											+e.BUTTON.content-close(type='button') Закрыть
+							+e.item._full.box-block
+								+e.item-corner._top
+								+e.item-corner._bot
+								+e.item-inner
+									+e.item-col
+										+e.item-icon-wrap
+											+e.item-icon.icon-faces
+										+e.item-text
+											+e.H3.item-title Личный опросник 
+											+e.H5.item-price
+												span 2 500
+												= ' '
+												| руб.
+									+e.item-info
+										+e.item-info-text.js-custom-scroll
+											+e.item-info-text-inner
+												p Числовой тест включает в себя вопросы из раздела таких наук как финансовая математика, статистика, экономика, демография.
+												p Числовой тест ограничен во времени и требует быстрого анализа и обработки информации.
+												p Тест бывает адаптивным, и если Вы дали неверный ответ на вопрос, то следующий вопрос будет более лёгким. Если же Вы дали правильный ответ, то следующий вопрос будет сложнее.
+												p Если Вы не уверены в своих силах - обращайтесь за помощью.
+										+e.item-actions
+											+btn('b', 'Заказать прохождение', '_type-3 services__item-actions-btn', 'write-us')
+											+e.BUTTON.content-close(type='button') Закрыть
+							+e.item._full.box-block
+								+e.item-corner._top
+								+e.item-corner._bot
+								+e.item-inner
+									+e.item-col
+										+e.item-icon-wrap
+											+e.item-icon.icon-speech-bubbles
+										+e.item-text
+											+e.H3.item-title Вербальные
+											+e.H5.item-price
+												span 2 000
+												= ' '
+												| руб.
+									+e.item-info
+										+e.item-info-text.js-custom-scroll
+											+e.item-info-text-inner
+												p Числовой тест включает в себя вопросы из раздела таких наук как финансовая математика, статистика, экономика, демография.
+												p Числовой тест ограничен во времени и требует быстрого анализа и обработки информации.
+												p Тест бывает адаптивным, и если Вы дали неверный ответ на вопрос, то следующий вопрос будет более лёгким. Если же Вы дали правильный ответ, то следующий вопрос будет сложнее.
+												p Если Вы не уверены в своих силах - обращайтесь за помощью.
+										+e.item-actions
+											+btn('b', 'Заказать прохождение', '_type-3 services__item-actions-btn', 'write-us')
+											+e.BUTTON.content-close(type='button') Закрыть
+							+e.item._full.box-block
+								+e.item-corner._top
+								+e.item-corner._bot
+								+e.item-inner
+									+e.item-col
+										+e.item-icon-wrap
+											+e.item-icon.icon-team-viewer
+										+e.item-text
+											+e.H3.item-title Сдача через TeamViewer
+											+e.H5.item-price
+												span 2 000
+												= ' '
+												| руб.
+									+e.item-info
+										+e.item-info-text.js-custom-scroll
+											+e.item-info-text-inner
+												p Числовой тест включает в себя вопросы из раздела таких наук как финансовая математика, статистика, экономика, демография.
+												p Числовой тест ограничен во времени и требует быстрого анализа и обработки информации.
+												p Тест бывает адаптивным, и если Вы дали неверный ответ на вопрос, то следующий вопрос будет более лёгким. Если же Вы дали правильный ответ, то следующий вопрос будет сложнее.
+												p Если Вы не уверены в своих силах - обращайтесь за помощью.
+										+e.item-actions
+											+btn('b', 'Заказать прохождение', '_type-3 services__item-actions-btn', 'write-us')
+											+e.BUTTON.content-close(type='button') Закрыть
+								+e.item._full.box-block
+								+e.item-corner._top
+								+e.item-corner._bot
+								+e.item-inner
+									+e.item-col
+										+e.item-icon-wrap
+											+e.item-icon.icon-speech-bubbles
+										+e.item-text
+											+e.H3.item-title Видеозапись сдачи теста 
+											+e.H5.item-price
+												span 2 000
+												= ' '
+												| руб.
+									+e.item-info
+										+e.item-info-text.js-custom-scroll
+											+e.item-info-text-inner
+												p Числовой тест включает в себя вопросы из раздела таких наук как финансовая математика, статистика, экономика, демография.
+												p Числовой тест ограничен во времени и требует быстрого анализа и обработки информации.
+												p Тест бывает адаптивным, и если Вы дали неверный ответ на вопрос, то следующий вопрос будет более лёгким. Если же Вы дали правильный ответ, то следующий вопрос будет сложнее.
+												p Если Вы не уверены в своих силах - обращайтесь за помощью.
+										+e.item-actions
+											+btn('b', 'Заказать прохождение', '_type-3 services__item-actions-btn', 'write-us')
+											+e.BUTTON.content-close(type='button') Закрыть
+							
+							+e.item._full.box-block
+								+e.item-corner._top
+								+e.item-corner._bot
+								+e.item-inner
+									+e.item-col
+										+e.item-icon-wrap
+											+e.item-icon.icon-video-camera
+										+e.item-text
+											+e.H3.item-title Видеозапись сдачи теста 
+											+e.H5.item-price
+												span 2 000
+												= ' '
+												| руб.
+									+e.item-info
+										+e.item-info-text.js-custom-scroll
+											+e.item-info-text-inner
+												p Числовой тест включает в себя вопросы из раздела таких наук как финансовая математика, статистика, экономика, демография.
+												p Числовой тест ограничен во времени и требует быстрого анализа и обработки информации.
+												p Тест бывает адаптивным, и если Вы дали неверный ответ на вопрос, то следующий вопрос будет более лёгким. Если же Вы дали правильный ответ, то следующий вопрос будет сложнее.
+												p Если Вы не уверены в своих силах - обращайтесь за помощью.
+										+e.item-actions
+											+btn('b', 'Заказать прохождение', '_type-3 services__item-actions-btn', 'write-us')
+											+e.BUTTON.content-close(type='button') Закрыть
+							+e.item._full.box-block
+								+e.item-corner._top
+								+e.item-corner._bot
+								+e.item-inner
+									+e.item-col
+										+e.item-icon-wrap
+											+e.item-icon.icon-discount
+										+e.item-text
+											+e.H3.item-title Скидка
+												span 20%
+									+e.item-info
+										+e.item-info-text.js-custom-scroll
+											+e.item-info-text-inner
+												p Числовой тест включает в себя вопросы из раздела таких наук как финансовая математика, статистика, экономика, демография.
+												p Числовой тест ограничен во времени и требует быстрого анализа и обработки информации.
+												p Тест бывает адаптивным, и если Вы дали неверный ответ на вопрос, то следующий вопрос будет более лёгким. Если же Вы дали правильный ответ, то следующий вопрос будет сложнее.
+												p Если Вы не уверены в своих силах - обращайтесь за помощью.
+										+e.item-actions
+											+btn('b', 'Заказать прохождение', '_type-3 services__item-actions-btn', 'write-us')
+											+e.BUTTON.content-close(type='button') Закрыть
+	//end services
+						
+						
 
 	
 
