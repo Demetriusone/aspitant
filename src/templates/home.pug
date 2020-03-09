@@ -259,7 +259,52 @@ block content
 										+e.item-actions
 											+btn('b', 'Заказать прохождение', '_type-3 services__item-actions-btn', 'write-us')
 											+e.BUTTON.content-close(type='button') Закрыть
-	//end services
+		//end services
+		// begin how-to
+		+b.SECTION.how-to#how-to
+			+e.container.container
+				+sectTitle('как мы работаем','Пройти SHL тесты очень просто','_center how-to__title')
+				+e.row.row
+					+e.item.box-block
+						+e.item-icon-wrap._color-1
+							+e.item-icon.icon-send
+						+e.P.item-text Вы высылаете нам ссылку на тестирование 
+					+e.item.box-block
+						+e.item-icon-wrap._color-2
+							+e.item-cion.icon-test
+						+e.P.item-text Мы проходим тестирование по ссылке 
+					+e.item.box-block
+						+e.item-icon-wrap._color-3
+							+e.item-icon.icon-handshake
+						+e.item-text Узнаете результаты у работодателя. Вы сдали
+					+e.item.box-block
+						+e.item-icon-wrap._color-1
+							+e.item-icon.icon-credit-card
+						+e.item-text Оплачиваете наши услуги в течении недели
+		// end how-to 
+
+		// begin train
+		+b.SECTION.train#train
+			+e.IMG.decor.decor-img(src="img/decor/decor_4.svg" alt="image")
+			+e.container.container
+				+e.img(style="background-image:url(img/bg/train_bg.png)")
+				+e.text
+					+sectTitle('обучение','Не можешь — научим,не хочешь — заставим!','_left train__title')
+					+e.text-inner
+						+e.P Теперь сдать SHL-тесты сможет даже Ваш дедуля. Стоимость обучения :
+						+e.UL.text-list.circled-list
+							li Академический час (45 минут) —
+								span 800 руб.
+							li Астрономический час (60 минут) —
+								span 1000 руб.
+						p Занятия проходят по
+							span Skype
+					+btn('b','Оставить заявку','_type-3 train__text-btn','write-us')
+		//end train
+
+
+			  	 
+
 						
 						
 

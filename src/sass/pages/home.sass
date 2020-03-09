@@ -443,7 +443,7 @@
            left: 15px
            right: 15px
         &.is-active
-            pointer-events: none
+            pointer-events: auto
             transform: scale(1)
             opacity: 1
             .services__item-inner
@@ -475,7 +475,135 @@
                 +xs
                     right: 12%
 // end services // 
-            
+// ***begin how-to *** //
+.how-to
+    padding: 70px 0
+    +md
+        padding: 70px
+    +xs
+        padding: 30px 0 36px
+    &__title
+        max-width: 500px
+        margin: 0 auto 47px
+    &__row
+        margin: 0 -17px
+        justify-content: center
+        counter-reset: howToItem
+    &__item
+        position: relative
+        flex: 0 1 calc(25% - 34px)
+        height: 214px
+        max-width: 259.5px
+        min-width: 259.5px
+        margin: 0 17px
+        padding: 35px 25px 25px
+        text-align: center
+        counter-increment: howToItem
+        overflow: hidden
+        +md
+            margin: 0 17px 34px
+        &::before 
+            position: absolute
+            left: -12px
+            top: 50%
+            transform: translateY(-50%)
+            margin-top: 2px
+            text-shadow: 0 15px 40px rgba(18, 3, 58, 0.15)
+            color: $color2
+            +f('gp900')
+            font-size: 34px
+            line-height: 18px
+            content: counter(howToItem,decimal-leading-zero)
+        &::after
+            position: absolute
+            top: 27px
+            left: -113px
+            opacity: 0.04
+            color: $color2
+            +f('gp900')
+            font-size: 305px
+            line-height: 200px
+            content: counter(howToItem,decimal-leading-zero)
+            pointer-events: none
+        &-icon
+            &-wrap
+                position: relative
+                z-index: 1
+                display: inline-flex
+                align-items: center
+                justify-content: center
+                width: 90px
+                height: 90px
+                margin-bottom: 15px
+                border-radius: 50%
+                &_color-1
+                    background-color: $color5
+                &_color-2
+                    background-color: #f1ae2f
+                &_color-3
+                    background-color: #fe77af
+// end how to //
+
+// *** begin train *** //
+.train
+    position: relative
+    padding: 88px 0
+    +xs
+        padding: 30px 0
+    &__decor
+        right: 0
+        top: 2%
+        height: 123%
+        +xs
+            top: 50%
+            height: 123%
+    &__container
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+        +xs
+            flex-direction: column
+    &__img
+        flex: 0 1 percentage(434 / 1140)
+        margin: 10px 0 0 -25px
+        +ratio(434,433)
+        +cover
+        +xs
+            flex: 0 1 auto
+            width: 100%
+            margin: 0
+    &__text
+        flex: 0 1 percentage(672 / 1140)
+        +xs
+            flex: 0 1 auto
+        p
+            font-size: 18px
+            line-height: 28px
+            &:not(:last-child)
+                margin-bottom: 20px
+            span
+                +f('gp700')
+                color: $color5
+        &-inner
+            margin-bottom: 43px
+        &-list
+             margin-bottom: 20px
+             li
+                &::before
+                     width: 6px
+                     height: 6px
+                     margin: 0 11px 0 6px
+                     background-color: #fe77af
+                &::not(:last-child)
+                    margin-bottom: 5px
+                span
+                    +f('gp700')
+                    color: $color2
+    &__title
+        margin-bottom: 44px
+// end train //
+
+        
 
 
 
