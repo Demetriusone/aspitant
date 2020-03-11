@@ -100,6 +100,110 @@
         +xs
             flex: 0 1 140px
             padding: 12px 15px 10px
+// end contact-block
+
+// *** begin video-block *** //
+.video-block
+    $parent: &
+    position: relative
+    display: flex
+    align-items: flex-end
+    justify-content: center
+    padding-bottom: 26px
+    height: 250px
+    border-radius: 4px
+    overflow: hidden
+    transition: .3s ease-in-out
+    box-shadow: 0 15px 40px rgba(18, 3, 58,0.15)
+    &:hover
+        transform: translateY(-10px)
+    &.is-active
+        &::after
+            opacity: 9
+    &::after
+        +coverdiv
+        pointer-events: none
+        background-color: $color2
+        transition: .3s ease-in-out
+        content: ''
+    &__video
+        +coverdiv
+        width: 100%
+        height: 100%
+        +cover-video
+    &__play-btn
+        +vcenter
+        top: 51.5%
+        z-index: 1
+        +trs
+        .is-active &
+            opacity: 0
+            pointer-events: none
+        &:hover svg
+            transform: scale(1.2)
+        &-icon
+            width: 30px
+            height: 32px
+            fill: $white
+            +trs
+    &__text
+        max-width: 240px
+        z-index: 1
+        color: #fff
+        font-size: 16px
+        line-height: 24px
+        text-align: center
+        transition: .3s ease-in-out
+        .is-active &
+            pointer-events: none
+            opacity: 0
+            transform: translateY(100%)
+    &__corner
+        position: absolute
+        width: 20px
+        height: 20px
+        z-index: 1
+        border-style: solid
+        border-color: $color3
+        transition: .3s ease-in-out
+        #{$parent}:hover &
+            opacity: 0
+        
+        .is-active &
+            pointer-events: none
+            opacity: 0
+        &_top
+            top: 20px
+            left: 20px
+            border-left-width: 1px
+            border-top-width: 1px
+            #{$parent}:hover &
+                top: 0
+                left: 0
+        &_bot
+            bottom: 20px
+            right: 20px
+            border-bottom-width: 1px
+            border-right-width: 1px
+            #{$parent}:hover &
+                right: 0
+                bottom: 0
+        &__decor-triangle
+            pointer-events: none
+            position: absolute
+            top: 50%
+            left: 50%
+            z-index: 1
+            fill: rgba($white, .1)
+            width: 286px
+            height: 274px
+            margin-top: -143px
+            margin-left: -137px
+            animation: rotating 30s linear infinite
+            transition: .3s ease-in-out
+            .is-active &
+                opacity: 0
+// end video block
 
                 
 
