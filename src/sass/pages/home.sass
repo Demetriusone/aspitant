@@ -677,6 +677,135 @@
         &.hidden
             opacity: 0
 // end pass //
+// *** begin testimonials ***//
+.testimonials
+    position: relative
+    z-index: 1
+    padding: 93px 0 80px 
+    background: no-repeat 56% 99%
+    background-size: auto
+    +xs
+        padding: 30px 0 0 
+    &__decor
+        left: 0
+        top: -53%
+        width: 536px
+        height: 1173px
+        +xs
+            left: 0
+            top: 50%
+            width: 218px
+            height: 683px
+    &__container
+        max-width: 1190px
+    &__title
+        max-width: 600px
+        margin: 0 auto 5px
+    &__slider
+        margin-bottom: 10px
+        +md
+            max-width: 380px
+            padding-bottom: 50px
+        .slick-list
+            padding: 55px 20px 40px 
+            margin: 0 -15px
+            height: auto !important
+            +md
+                margin: 0 15px
+            +xs
+                padding: 55px 0 40px
+        .slider-btn
+            +xs
+                top: calc(100% - 40px)
+            &_prev
+                left: -48px
+                +xs
+                    left: calc(50% - 50px)
+            &_next
+                right: -48px
+                +xs
+                    right: calc(50% - 50px)
+    &__item
+        position: relative
+        margin: 0 25px
+        height: 350px 
+        opacity: 0
+        +gpu
+        +md
+            margin: 0 15px
+        +xs
+            height: 300px
+        &.slick-active
+            opacity: 1
+        &-inner
+            padding: 40px 11px 0 36px
+            border-radius: 4px
+            background: #fff
+            +xs
+                padding: 30px 10px 20px 20px
+        &-date
+            position: absolute
+            top: -45px
+            right: -17px
+            z-index: -1
+            width: 90px
+            height: 90px
+            padding: 22px 0 0 
+            border-radius: 50%
+            box-shadow: 0 15px 40px rgba(18, 3, 58, 0.15)
+            color: #fff
+            text-align: center 
+            +f('gp500',14,14)
+            +xs
+                right: 15px
+            &_color-1
+                background-color: $color5
+            &_color-2
+                background-color: #f1ae2f
+            &_color-3
+                background-color: #fe77af
+        &-title
+            margin-bottom: 9px
+            +f('gp700',18,26)
+            &_color-1 svg
+                fill: $color5
+            &_color-2 svg
+                fill: #f1ae2f
+            &_color-3 svg
+                fill: #fe77af
+            svg
+                margin-right: 11px
+                font-size: 14px
+        &-text
+            position: relative
+            height: 260px
+            +xs
+                height: 210px
+            &::after
+                transition: .15s ease-in-out
+            &.is-scrolled::after
+                opacity: 0
+            &:not(.mCS_no_scrollbar)::after
+                position: absolute
+                bottom: 0
+                left: 0
+                width: 100%
+                height: 95px
+                background-image: linear-gradient(to top, #ffffff 0%, #ffffff 21%, rgba(255, 255, 255, 0) 100%)
+                pointer-events: none
+                content: ''
+            p
+                padding-right: 25px
+                font-size: 16px
+                line-height: 26px
+                +xs
+                    padding-right: 0
+    &__actions
+        text-align: center
+        &-btn
+            padding: 13px 45px 12px
+// end testimonials
+
         
 
         
