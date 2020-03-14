@@ -329,45 +329,69 @@ block content
 			//end pass
 
 			//begin testimonials
-			+b.SECTION.testimonials#testimonials(style='background-image:url(img/bg/bg_particles-2.svg)')
-				+e.IMG.decor.decor-img(src='img/decor/decor_5.svg' alt='image')
-				+e.container.container
-					+sectTitle('отзывы','Вот что о нас говорят наши клиенты','_center testimonials__title')
-					+e.slider.slider
-						-i = 0
-						while i < 2
-							+e.item.box-block
-								+e.item-date._color-1
-									+e.SPAN 23.07.18
-								+e.item-inner
-									+e.H6.item-title._color-1
-										+i('left-quote')
-										| Олег Попов
-									+e.item-text.js-custom-scroll
-										p Старая работа вижила меня,как лимон. Хотелось просто выть.Решил найти новую, менее стрессовую. Но там необходимо было пройти SHL тест, а я к такому просто не готов. Благодарен Вашим специалистам, помогли! Результат просто супер.
-							+e.item.box-block
-								+e.item-date._color-2
-									+e.SPAN 14.07.18
-								+e.item-inner
-									+e.H6.item-title._color-2
-										+i('left-quote')
-										| Елизавета Горянская
-									+e.item-text.js-custom-scroll
-										p Давно мечтала о хорошей должности в серйозном банке. Образование и опыт позволяли, однако на собеседовании сообщили что нужно пройти этот тест. Я никогда раньше с ним не сталкивалась. Времени учить самостоятельно не было, поэтому решила обратиться к Вам. Слелали все на высшем уровне. Спасибо! Давно мечтала о хорошей должности в серйозном банке. Образование и опыт позволяли, однако на собеседовании сообщили что нужно пройти этот тест. Я никогда раньше с ним не сталкивалась. Времени учить самостоятельно не было, поэтому решила обратится к Вам. Сделали все на высшем уровне. Спасибо!
-							+e.item.box-block
-								+e.item-date._color-3
-									+e.SPAN 05.07.18
-								+e.item-inner
-									+e.H6.item-title._color-3
-										+i('left-quote')
-										| Константин Багенский 
-									+e.item-text.js-custom-scroll
-										p Заказал тесты, сделали быстро. Сервис у Вас на высшем уровне, что очень радует. Не ожидал такого, если честно. Отдельное спасибо Игорю за консультацию и за то, что объснил мне что нада зделать чтобы все прошло гладко. Очень рад сотрудничеству.
-							-i++
-					
-					+e.actions
-						+btn('b','Добавить отзыв','_type-2 testimonials__actions-btn','add-testimonial')
-			// end testimonials 
+		+b.SECTION.testimonials#testimonials(style='background-image:url(img/bg/bg_particles-2.svg)')
+			+e.IMG.decor.decor-img(src='img/decor/decor_5.svg' alt='image')
+			+e.container.container
+				+sectTitle('отзывы','Вот что о нас говорят наши клиенты','_center testimonials__title')
+				+e.slider.slider
+					-i = 0
+					while i < 2
+						+e.item.box-block
+							+e.item-date._color-1
+								+e.SPAN 23.07.18
+							+e.item-inner
+								+e.H6.item-title._color-1
+									+i('left-quote')
+									| Олег Попов
+								+e.item-text.js-custom-scroll
+									p Старая работа вижила меня,как лимон. Хотелось просто выть.Решил найти новую, менее стрессовую. Но там необходимо было пройти SHL тест, а я к такому просто не готов. Благодарен Вашим специалистам, помогли! Результат просто супер.
+						+e.item.box-block
+							+e.item-date._color-2
+								+e.SPAN 14.07.18
+							+e.item-inner
+								+e.H6.item-title._color-2
+									+i('left-quote')
+									| Елизавета Горянская
+								+e.item-text.js-custom-scroll
+									p Давно мечтала о хорошей должности в серйозном банке. Образование и опыт позволяли, однако на собеседовании сообщили что нужно пройти этот тест. Я никогда раньше с ним не сталкивалась. Времени учить самостоятельно не было, поэтому решила обратиться к Вам. Слелали все на высшем уровне. Спасибо! Давно мечтала о хорошей должности в серйозном банке. Образование и опыт позволяли, однако на собеседовании сообщили что нужно пройти этот тест. Я никогда раньше с ним не сталкивалась. Времени учить самостоятельно не было, поэтому решила обратится к Вам. Сделали все на высшем уровне. Спасибо!
+						+e.item.box-block
+							+e.item-date._color-3
+								+e.SPAN 05.07.18
+							+e.item-inner
+								+e.H6.item-title._color-3
+									+i('left-quote')
+									| Константин Багенский 
+								+e.item-text.js-custom-scroll
+									p Заказал тесты, сделали быстро. Сервис у Вас на высшем уровне, что очень радует. Не ожидал такого, если честно. Отдельное спасибо Игорю за консультацию и за то, что объснил мне что нада зделать чтобы все прошло гладко. Очень рад сотрудничеству.
+						-i++
+				
+				+e.actions
+					+btn('b','Добавить отзыв','_type-2 testimonials__actions-btn','add-testimonial')
+		// end testimonials 
+
+		//begin contact
+		+b.SECTION.contact#contact
+			+e.IMG.decor._1.decor-img(src='img/decor/decor_6.svg' alt='image')
+			+e.IMG.decor._2.decor-img(src='img/decor/decor_7.svg' alt='image')
+			+i('decor-triangle','contact__decor-triangle contact__decor-triangle_1')
+			+i('decor-triangle','contact__decor-triangle contact__decor-triangle_2')
+			+e.container.container
+				+sectTitle('Контакты','Остались вопросы?','_center _white contact__title','Пиши или заказывай решения SHL теста')
+
+				+e.FORM.form.form(action="#!" method="POST")
+					+e.form-row.row
+						+e.form-field.form-field
+							+b.INPUT.form-field__input(type='text' name='' placeholder='Имя' required)
+						+e.form-field.form-field
+							+b.INPUT.form-field__input(type='text' name='' placeholder='Номер телефона...' required)
+						+e.form-field.form-field
+							+b.INPUT.form-field__input(type='text' name='' placeholder='Email...' required)
+					+e.TEXTAREA.form-textarea.textarea(placeholder='Ваше сообщение...' required)
+					+e.form-submit-wrap
+						+e.LABEL.form-submit-btn.form-submit-btn.btn_type-1 Отправить заявку
+							+e.INPUT(type='submit')
+			//end contact
+	//end main
 
 			
 

@@ -96,7 +96,7 @@ body
       transition: .3s ease-in-out
       pointer-events: none
       content: " "
-   &::hover
+   &:hover
       background-color: $color6
       &::after
          transform: translate(0)
@@ -123,7 +123,19 @@ body
       &:hover
          border-color: rgba($white,.6)
          &::after
-            border-color: transparent 
+            border-color: transparent
+   &_type-2
+      border: 1px solid #6f4dc2
+      color: #6f4dc2
+      background-color: #fff
+      &:hover
+         color:#fff
+         background-color: #6f4dc2
+      &::after
+         border: 1px solid rgba(111,77,194,.15)
+      &:hover::after
+         display: none
+
    &_type-3
       background-color: $color6
       &:hover

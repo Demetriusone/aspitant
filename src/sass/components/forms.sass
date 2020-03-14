@@ -1,0 +1,33 @@
+.form-field
+    &__input
+        width: 100%
+        height: 46px
+        padding: 0 36px
+        +f('gp400', 14, 46)
+        box-shadow: 0 15px 40px rgba(18, 3, 58, 0.15)
+        border-radius: 23px
+        background-color: #ebe9f2
+        +placeholder-color($color1)
+        transition: .3s ease-in-out
+        +sm
+            padding: 0 20px
+        &:focus
+            background-color: #fff
+.textarea
+    display: block
+    width: 100%
+    height: 122px
+    padding: 18px 36px
+    resize: none
+    box-shadow: 0 15px 40px rgba(18, 3, 58, 0.15)
+    border-radius: 23px
+    background-color: #ebe9f2
+    border: 0
+    +f('gp400', 14, 20)
+    transition: .3s ease-in-out
+    &:focus
+        background-color: #fff
+.form-submit-btn
+    cursor: 
+    input
+        display: none

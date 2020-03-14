@@ -805,6 +805,81 @@
         &-btn
             padding: 13px 45px 12px
 // end testimonials
+.contact
+    position: relative
+    padding: 277px 0 77px
+    +rmin(1921)
+        padding: 350px 0 77px
+    +xs
+        margin: -140px 0 0 
+        padding: 277px 0 50px
+    &_popup
+        padding: 0
+        +xs
+            padding: 0
+            margin: 0
+    &__decor
+        top: 0
+        left: 0
+        width: 100%
+        object-fit: cover
+        font-family: 'object-fit: cover;'
+        pointer-events: none
+        +lg
+            height: 100%
+        &_1
+            top: 1px
+            z-index: -1
+            filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.2))
+        &_2
+            top: 24%
+            z-index: -2
+        &-triangle
+            position: absolute
+            z-index: 1
+            fill: rgba($white, .15)
+            pointer-events: none
+            &_1
+                left: 7.8%
+                bottom: 6.3%
+                width: 122px
+                height: 133px
+                transform: rotate(37deg)
+            &_2
+                width: 235px
+                height: 239px
+                right: 4.5%
+                bottom: 30%
+                transform: rotate(-9deg)
+    &__container
+        max-width: 874px
+    &__title
+        margin-bottom: 50px
+        &_sm
+            max-width: 600px
+            margin: 0 auto 50px
+    &__form
+        &-row
+            margin: 0 -15px 30px
+            flex-wrap: nowrap
+            +sm
+                flex-wrap: wrap
+            +xs
+                flex-direction: column
+        &-field
+            flex: 0 1 33.33333%
+            padding: 0 15px
+            +xs
+                flex: 0 1 auto
+                width: 100%
+            &:not(:last-child)
+                +xs
+                    margin-bottom: 15px
+        &-textarea
+            margin-bottom: 40px
+        &-submit-wrap
+            text-align: center
+// emd contact //
 
         
 
