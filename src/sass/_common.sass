@@ -3,7 +3,7 @@ body
    min-width: 320px
    -webkit-font-smoothing: antialiased
    -moz-osx-font-smoothing: grayscale
-   +f("gp400", 18, 28)
+   +f('gp400', 18, 28)
    color: $color1
    +xs
       font-size: 16px
@@ -15,18 +15,22 @@ body
       right: 0
       height: 0
       overflow: hidden
+
 .container
    max-width: 1170px
    margin: 0 auto
    padding: 0 15px
-.row 
+   
+.row
    display: flex
    flex-wrap: wrap
    margin: 0 -15px
+
 .main
    overflow: hidden
+
 .section-title
-   $parent: & 
+   $parent: &
    position: relative
    padding-bottom: 20px
    +xs
@@ -46,15 +50,15 @@ body
       width: 50px
       height: 2px
       background-color: $color5
-      content: ""
-
+      content: ''
+      
    &__label
-      +f('gp700',12,12)
+      +f('gp700', 12, 12)
       letter-spacing: 2.4px
       color: $color3
-      text-transform: uppercase 
-   &__text 
-      +f('ex700',34,36)
+      text-transform: uppercase
+   &__text
+      +f('ex700', 34, 36)
       color: $color4
       +xs
          font-size: 30px
@@ -71,9 +75,9 @@ body
       z-index: -1
       transform: rotate(-7deg)
       margin-left: -40px
-      width: 40px
-      height: 40px
-      fill: rgba(#d2c8ec,.3)
+      width: 80px
+      height: 80px
+      fill: rgba(#d2c8ec, .3)
       #{$parent}_center &
          left: 50%
       #{$parent}_left &
@@ -86,16 +90,16 @@ body
    outline: 0
    border-radius: 50px
    transition: .3s ease-in-out
-   +f('gp400',16)
+   +f('gp400', 16)
    line-height: 1.2
    color: #fff
    &::after
       +coverdiv
-      transform: translate(8px,5px)
+      transform: translate(8px, 5px)
       border-radius: 50px
       transition: .3s ease-in-out
       pointer-events: none
-      content: " "
+      content: ''
    &:hover
       background-color: $color6
       &::after
@@ -106,8 +110,8 @@ body
          top: 50%
          right: 20px
          display: flex
-         justify-content: center 
-         align-items: center 
+         justify-content: center
+         align-items: center
          width: 22px
          height: 22px
          margin-top: -11px
@@ -118,39 +122,36 @@ body
       box-shadow: 0 15px 40px rgba(18, 3, 58, 0.15)
       border: 1px solid #fff
       &::after
-         content: ''
          border: 1px solid rgba($white, .15)
+         content: ''
       &:hover
-         border-color: rgba($white,.6)
+         border-color: rgba($white, .6)
          &::after
             border-color: transparent
+            
    &_type-2
-      border: 1px solid #6f4dc2
-      color: #6f4dc2
-      background-color: #fff
-      &:hover
-         color:#fff
-         background-color: #6f4dc2
+      padding: 13px 21px 12px
+      border: 1px solid $color2
+      color: $color2
+      background: $white
       &::after
-         border: 1px solid rgba(111,77,194,.15)
-      &:hover::after
-         display: none
-
+         border: 1px solid rgba($color2, .15)
+      &:hover
+         color: $white
    &_type-3
       background-color: $color6
       &:hover
          background-color: darken($color6, 6)
       &::after
          border: 1px solid rgba(#5f3cb7, .15)
-   
    &_type-4
       position: relative
       padding: 16px 61px 15px 33px
-      box-shadow:  0 15px 40px rgba(18, 3, 58, 0.15), 0 0 20px rgba(104, 193 ,221, 0.2) 
+      box-shadow: 0 15px 40px rgba(18, 3, 58, 0.15), 0 0 20px rgba(104, 193, 221, 0.2)
       background-color: $color5
-      +f('gp700',16)
+      +f('gp700', 16)
       &:hover
-         background-color: darken($color5,15)
+         background-color: darken($color5, 15)
       &::after
          display: none
       
@@ -158,6 +159,7 @@ body
          width: 8px
          height: 8px
          fill: $white
+         
 .circled-list
    li
       &::before
@@ -168,36 +170,40 @@ body
          height: 5px
          margin-right: 5px
          border-radius: 50%
-         content: ""
+         content: ''
+         
 p
    a
       color: $color5
       border-bottom: 1px solid rgba($color5, .6)
-      transition: .3s easy-in-out
+      transition: .3s ease-in-out
       &:hover
          border-bottom-color: transparent
 strong
-   +f("gp700")
+   +f('gp700')
+
 .box-block
-   box-shadow: 0 15px 40px rgba(18, 3,58,0.15)
+   box-shadow: 0 15px 40px rgba(18, 3, 58, 0.15)
    border-radius: 4px
    background-color: #fff
    font-size: 16px
    line-height: 24px
-   transition: .3s  ease-in-out
+   transition: .3s ease-in-out
    &:hover
       transform: translateY(-10px)
 
-
-
-
-
-
-
+// custom scroll
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar
+   box-shadow: 0 15px 40px rgba(18, 3, 58, 0.15)
+   background-color: $color3
+   opacity: 0.98
+   border-radius: 0
+.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,
+.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar, .mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar
+   background-color: $color6
+.mCSB_scrollTools .mCSB_draggerRail
+   background-color: rgba($color3, .1)
 
 .decor-img
    position: absolute
    z-index: -1
-
-   
-         

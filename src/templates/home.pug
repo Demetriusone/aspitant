@@ -1,16 +1,17 @@
 extends layouts/_layout
 
 block variables
-	-title = 'Главная1'
+	-title = 'Главная'
 
 block content
+
 	//begin main
 	main.main
 
 		//begin screen
 		+b.SECTION.screen
-			+e.IMG.decor._1.decor-img(src="./img/decor/decor_1.svg" alt="img")
-			+e.IMG.decor._2.decor-img(src="./img/decor/decor_2.svg" alt="img")
+			+e.IMG.decor._1.decor-img(src='img/decor/decor_1.svg' alt='image')
+			+e.IMG.decor._2.decor-img(src='img/decor/decor_2.svg' alt='image')
 			+e.container.container
 				+e.triangle.triangle
 				+e.inner
@@ -20,84 +21,89 @@ block content
 						+e.H4.sub-title test
 					+e.descr
 						+e.P.descr-text Проходим SHL и другие тесты при устройстве на работу Online на
-							+e.SPAN.descr-text-mark._color1 русском
+							+e.SPAN.descr-text-mark._color-1 русском
 							= ' '
 							| и
-							+e.SPAN.descr-text-mark._color2 английском
+							+e.SPAN.descr-text-mark._color-2 английском
 							= ' '
 							| языке без предоплаты
-						+e.A.descr-btn.btn._type-4(href="!#") Как сдать тест?
+
+						+e.A.descr-btn.btn._type-4(href='#!') Как сдать тест?
 							.btn__icon-circle
 								+i('triangle-play')
-		// end screen
-		
+		//end screen
+
 		//begin about
-		+b.SECTION.about#about(style="background-image:url(img/bg/bg_particles-1.svg)")
+		+b.SECTION.about#about(style='background-image: url(img/bg/bg_particles-1.svg)')
 			+e.container.container
 				+e.text
-					+sectTitle('о нас', 'Кто поможет Вам пройти SHL тесты без предоплаты ?', '_left about__title')
+					+sectTitle('о нас', 'Кто поможет Вам пройти SHL тесты без предоплаты?', '_left about__title')
+
 					+e.descr
-						p Мы — друзья аспиранты без пяти минут кандидаты наук.
-						p Обучаемся в аспирантуре и прекрасно разбираемся в любых научных дисциплинах. У нас технический склад ума и высоки IQ.
-						p Мы сможем сдать за Вас SHL, Talent Q, Map TQ и любые другие тесты! При этом, оплата тестов осуществляется в течении недели после сдачи!
+						p Мы — друзья-аспиранты без пяти минут кандидаты наук.
+						p Обучаемся в аспирантуре и прекрасно разбираемся в любых научных дисциплинах. У нас технический склад ума и высокий IQ.
+						p Мы cможем сдать за Вас SHL, Talent Q, Map TQ и любые другие тесты! При этом, оплата тестов осуществляется в течение недели после сдачи!
 				+e.img(style='background-image: url(img/bg/about_bg.png)')
 		//end about
-		//**begin services**/
+
+		//begin services
 		+b.SECTION.services#services
-			+e.IMG.decor.decor-img(src="img/decor/decor_3.svg" alt="img" )
+			+e.IMG.decor.decor-img(src='img/decor/decor_3.svg' alt='image')
 			+e.container.container
-				+sectTitle('Услуги и цены','Виды и стоимость прохождения SHL тестов', '_center services__title')
+				+sectTitle('услуги и Цены', 'Виды и стоимость прохождения SHL тестов', '_center services__title')
 
 				+e.row.row
-					-	 
+					-
 						servList = [{
-						icon:'numbers',
-						title:'Числовые',
-						price: '2000'
-						},{
-						icon:'faces',
-						title:'Личностный Опросник',
-						price: '2500'
-						},{
-						icon:'speech-bubbles',
-						title:'Вербальные',
-						price: '2000'
-						},{
-						icon:'team-viewer',
-						title:'Сдача через TiemViewer',
-						price: '2000'
-						},{
-						icon:'video-camera',
-						title:'Видеозапись сдачи теста',
+						icon: 'numbers',
+						title: 'Числовые',
+						price: '2 000'
+						}, {
+						icon: 'faces',
+						title: 'Личностный опросник',
+						price: '2 500'
+						}, {
+						icon: 'speech-bubbles',
+						title: 'Вербальные',
+						price: '2 000'
+						}, {
+						icon: 'team-viewer',
+						title: 'Сдача через TeamViewer',
+						price: '2 000'
+						}, {
+						icon: 'video-camera',
+						title: 'Видеозапись сдачи теста',
 						price: '500'
-						},{
-						icon:'discount',
-						title:'Скидка',
-						list:['При оплате вперед','Обращение с другом']
+						}, {
+						icon: 'discount',
+						title: 'Cкидка',
+						titleLabel: '20%',
+						list: ['При оплате вперёд', 'Обращение с другом']
 						}]
-				
+
 					mixin servItem(item)
-						+e.item.box-block(onclick="")
+						+e.item.box-block(onclick='')
 							+e.item-corner._top
 							+e.item-corner._bot
 							+e.item-inner
 								+e.item-icon-wrap
 									+e.item-icon(class=`icon-${item.icon}`)
-								+e.item-text(class=item.list ? '_has-list' : '')
-										+e.H3.item-title= item.title
-											if item.titleLabel
-												span= item.titleLabel
-										if item.price 
-											+e.H5.item-price
-												span= item.price
-												= " "
-												| руб.
-										if item.list
-											+e.UL.item-list.circled-list
-												each text in item.list
-													li= text 
-					each item in servList 
+								+e.item-text(class= item.list ? '_has-list' : '')
+									+e.H3.item-title= item.title
+										if item.titleLabel
+											span= item.titleLabel
+									if item.price
+										+e.H5.item-price
+											span= item.price
+											= ' '
+											| руб.
+									if item.list
+										+e.UL.item-list.circled-list
+											each text in item.list
+												li= text
+					each item in servList
 						+servItem(item)
+
 					+e.content
 						+e.slider.js-slider
 							+e.item._full.box-block
@@ -108,32 +114,9 @@ block content
 										+e.item-icon-wrap
 											+e.item-icon.icon-numbers
 										+e.item-text
-											+e.H3.item-title Числовой тест 
+											+e.H3.item-title Числовой тест
 											+e.H5.item-price
-												span 2000 
-												= " "
-												| руб.
-									+e.item-info
-										+e.item-info-text.js-custom-scroll
-											+e.item-info-text-inner
-												p Числовой текст включает в себя вопросы из раздела таких наук как финансовая математика, статистика, экономика, демофграфия.
-												p Числовой тест ограничен во времени и требует быстрого анализа и обработки информации.
-												p Тест бывает адаптивным, и если Вы дали неверный ответ на вопрос , то следующий вопрос будет более легким. Если же вы дали правильный ответ , то следующий вопрос будет более сложнее.
-												p Если вы не уверены в своих силах - обращайтесь за помощью.
-										+e.item-actions
-											+btn('b', 'Заказать прохождение', '_type-3 services__item-actions-btn', 'write-us')
-											+e.BUTTON.content-close(type='button') Закрыть
-							+e.item._full.box-block
-								+e.item-corner._top
-								+e.item-corner._bot
-								+e.item-inner
-									+e.item-col
-										+e.item-icon-wrap
-											+e.item-icon.icon-faces
-										+e.item-text
-											+e.H3.item-title Личный опросник 
-											+e.H5.item-price
-												span 2 500
+												span 2 000
 												= ' '
 												| руб.
 									+e.item-info
@@ -146,6 +129,33 @@ block content
 										+e.item-actions
 											+btn('b', 'Заказать прохождение', '_type-3 services__item-actions-btn', 'write-us')
 											+e.BUTTON.content-close(type='button') Закрыть
+
+							+e.item._full.box-block
+								+e.item-corner._top
+								+e.item-corner._bot
+								+e.item-inner
+									+e.item-col
+										+e.item-icon-wrap
+											+e.item-icon.icon-faces
+										+e.item-text
+											+e.H3.item-title Личностный опросник
+											+e.H5.item-price
+												span 2 500
+												= ' '
+												| руб.
+									+e.item-info
+										+e.item-info-text.js-custom-scroll
+											+e.item-info-text-inner
+												p Числовой тест включает в себя вопросы из раздела таких наук как финансовая математика, статистика, экономика, демография.
+												p Числовой тест ограничен во времени и требует быстрого анализа и обработки информации.
+												p Тест бывает адаптивным, и если Вы дали неверный ответ на вопрос, то следующий вопрос будет более лёгким. Если же Вы дали правильный ответ, то следующий вопрос будет сложнее.
+												p Если Вы не уверены в своих силах - обращайтесь за помощью.
+												p Числовой тест включает в себя вопросы из раздела таких наук как финансовая математика, статистика, экономика, демография.
+												p Числовой тест ограничен во времени и требует быстрого анализа и обработки информации.
+										+e.item-actions
+											+btn('b', 'Заказать прохождение', '_type-3 services__item-actions-btn', 'write-us')
+											+e.BUTTON.content-close(type='button') Закрыть
+
 							+e.item._full.box-block
 								+e.item-corner._top
 								+e.item-corner._bot
@@ -169,6 +179,7 @@ block content
 										+e.item-actions
 											+btn('b', 'Заказать прохождение', '_type-3 services__item-actions-btn', 'write-us')
 											+e.BUTTON.content-close(type='button') Закрыть
+
 							+e.item._full.box-block
 								+e.item-corner._top
 								+e.item-corner._bot
@@ -192,30 +203,7 @@ block content
 										+e.item-actions
 											+btn('b', 'Заказать прохождение', '_type-3 services__item-actions-btn', 'write-us')
 											+e.BUTTON.content-close(type='button') Закрыть
-								+e.item._full.box-block
-								+e.item-corner._top
-								+e.item-corner._bot
-								+e.item-inner
-									+e.item-col
-										+e.item-icon-wrap
-											+e.item-icon.icon-speech-bubbles
-										+e.item-text
-											+e.H3.item-title Видеозапись сдачи теста 
-											+e.H5.item-price
-												span 2 000
-												= ' '
-												| руб.
-									+e.item-info
-										+e.item-info-text.js-custom-scroll
-											+e.item-info-text-inner
-												p Числовой тест включает в себя вопросы из раздела таких наук как финансовая математика, статистика, экономика, демография.
-												p Числовой тест ограничен во времени и требует быстрого анализа и обработки информации.
-												p Тест бывает адаптивным, и если Вы дали неверный ответ на вопрос, то следующий вопрос будет более лёгким. Если же Вы дали правильный ответ, то следующий вопрос будет сложнее.
-												p Если Вы не уверены в своих силах - обращайтесь за помощью.
-										+e.item-actions
-											+btn('b', 'Заказать прохождение', '_type-3 services__item-actions-btn', 'write-us')
-											+e.BUTTON.content-close(type='button') Закрыть
-							
+
 							+e.item._full.box-block
 								+e.item-corner._top
 								+e.item-corner._bot
@@ -224,9 +212,9 @@ block content
 										+e.item-icon-wrap
 											+e.item-icon.icon-video-camera
 										+e.item-text
-											+e.H3.item-title Видеозапись сдачи теста 
+											+e.H3.item-title Видеозапись сдачи теста
 											+e.H5.item-price
-												span 2 000
+												span 500
 												= ' '
 												| руб.
 									+e.item-info
@@ -239,6 +227,7 @@ block content
 										+e.item-actions
 											+btn('b', 'Заказать прохождение', '_type-3 services__item-actions-btn', 'write-us')
 											+e.BUTTON.content-close(type='button') Закрыть
+
 							+e.item._full.box-block
 								+e.item-corner._top
 								+e.item-corner._bot
@@ -247,7 +236,7 @@ block content
 										+e.item-icon-wrap
 											+e.item-icon.icon-discount
 										+e.item-text
-											+e.H3.item-title Скидка
+											+e.H3.item-title Cкидка
 												span 20%
 									+e.item-info
 										+e.item-info-text.js-custom-scroll
@@ -259,37 +248,39 @@ block content
 										+e.item-actions
 											+btn('b', 'Заказать прохождение', '_type-3 services__item-actions-btn', 'write-us')
 											+e.BUTTON.content-close(type='button') Закрыть
+
 		//end services
-		// begin how-to
+
+		//begin how-to
 		+b.SECTION.how-to#how-to
 			+e.container.container
-				+sectTitle('как мы работаем','Пройти SHL тесты очень просто','_center how-to__title')
+				+sectTitle('как мы работаем', 'Пройти SHL тесты очень просто', '_center how-to__title')
 				+e.row.row
 					+e.item.box-block
 						+e.item-icon-wrap._color-1
 							+e.item-icon.icon-send
-						+e.P.item-text Вы высылаете нам ссылку на тестирование 
+						+e.P.item-text Вы высылаете нам ссылку на тестирование
 					+e.item.box-block
 						+e.item-icon-wrap._color-2
-							+e.item-cion.icon-test
-						+e.P.item-text Мы проходим тестирование по ссылке 
+							+e.item-icon.icon-test
+						+e.P.item-text Мы проходим тестирование по ссылке
 					+e.item.box-block
 						+e.item-icon-wrap._color-3
 							+e.item-icon.icon-handshake
-						+e.item-text Узнаете результаты у работодателя. Вы сдали
+						+e.P.item-text Узнаете результаты у работодателя. Вы сдали!
 					+e.item.box-block
 						+e.item-icon-wrap._color-1
 							+e.item-icon.icon-credit-card
-						+e.item-text Оплачиваете наши услуги в течении недели
-		// end how-to 
+						+e.P.item-text Оплачиваете наши услуги в течение недели
+		//end how-to
 
-		// begin train
+		//begin train
 		+b.SECTION.train#train
-			+e.IMG.decor.decor-img(src="img/decor/decor_4.svg" alt="image")
+			+e.IMG.decor.decor-img(src='img/decor/decor_4.svg' alt='image')
 			+e.container.container
-				+e.img(style="background-image:url(img/bg/train_bg.png)")
+				+e.img(style='background-image: url(img/bg/train_bg.png)')
 				+e.text
-					+sectTitle('обучение','Не можешь — научим,не хочешь — заставим!','_left train__title')
+					+sectTitle('обучение', 'Не можешь — научим, не хочешь — заставим!', '_left train__title')
 					+e.text-inner
 						+e.P Теперь сдать SHL-тесты сможет даже Ваш дедуля. Стоимость обучения:
 						+e.UL.text-list.circled-list
@@ -299,40 +290,43 @@ block content
 								span 1000 руб.
 						p Занятия проходят по
 							span Skype
-					+btn('b','Оставить заявку','_type-3 train__text-btn','write-us')
+
+					+btn('b', 'Оставить заявку', '_type-3 train__text-btn', 'write-us')
 		//end train
-		
+
 		//begin pass
 		+b.SECTION.pass#pass
 			+e.container.container
-				+sectTitle('Как сдать SHL тест?','Пройти тесты SHL без предоплаты не сложно','_left _md pass__title')
+				+sectTitle('Как сдать SHL тест?', 'Пройти тесты SHL по доступной цене без предоплаты не сложно', '_left _md pass__title')
 				+e.text
-					p SHL тесты представляют собой особый вид атестации, которая состиит из уникального сочетания числовых и вербальных тестов, позволяющих работодателю определить уровень логических и математических способнойстей сотрудника или притендента на должность.
+					p SHL тесты представляют собой особый вид аттестации, которая состоит из уникального сочетания числовых и вербальных тестов, позволяющих работодателю определить уровень логических и математических способностей сотрудника или претендента на должность.
 					p Кроме того, благодаря SHL-тестированию выявляется способность к аналитическому мышлению, восприятию словесной информации, поиску необходимых данных за ограниченный промежуток времени.
-						strong Сдаем числовые shl тесты, вербальные - это наша основная специализация.
+						strong Сдаем числовые shl тесты, вербальные – это наша основная специализация.
 				+e.videos.js-videos-container
 					+e.videos-row.row
 						+e.videos-col
-							+videoBlock('Как сдать числовой тест SHL:факторы успеха','pass__video')
+							+videoBlock('Как сдать числовой тест SHL: факторы успеха', 'pass__video')
 						+e.videos-col
-							+videoBlock('Как сдать вербальный тест: к чему готовится?','pass__video')
+							+videoBlock('Как сдать вербальный тест: к чему готовиться?', 'pass__video')
+
 				+e.text
-					p Существует множество причин, по которым пройти SHL тесты рядовому сотруднику крайне сложно. Можно пытаться искать и изучать
-						a(href="#!") ответы к тестам
+					p Существует множество причин, по которым пройти SHL тесты рядовому сотруднику крайне сложно. Можно пытаться искат и изучать
+						a(href='#!') ответы к тестам
 						= ' '
 						| , но как правило это бесполезное занятие. Вместе с тем, сотрудник может обладать высоким уровнем квалификации, однако, SHL-тестирование лишь определяет уровень интеллекта, игнорируя при этом такие важные для персонала качества как воображение, креативное мышление, творческий подход...
 				+e.text._hidden
-					p Именно по этой причине большое количество талантливых сотрудников отсеивается на этапе этого сухого математического тестирования. Мы, будучи аспирантами с техническим складом ума, можем помочь в решении этой проблемы. Если Вы беспокоитесь за успешное прохождение SHL-тестов, то мы запросто пройдем SHL тесты за вас с 100% гарантией результата. Не ищите примеры тестов SHL. В нашем арсенале уже имеется довольно большой послужной список сдачи SHL-тестирования для сотрудников самых разных компаний. Для успешного решения SHL тестов у нас есть не только необходимые знания, но и опыт.
-					p Прохождение SHL теста по работе теперь для вас не будет никакой проблемой и поводом для беспокойства. Стоит ли говорить, что если Вы не уверенны в своих силах, то лучше обратится к тем, кто в них уверен. Ведь на кон поставлена Ваша успешная карьера, а это очень серьезная ставка. Жизненные реалии таковы, что в ряде случаев выгоднее заказать сдачу SHL тестов или купить прохождение SHL теста, чем рисковать собственной карьерой. Цена на SHL тесты варьируются.Стоимость сдачи зависит от их вида: вербальные SHL тесты дешевле, числовые SHL тесты дороже. Для того чтобі пройти shl тесты для своей работы, вам нужно посмотреть цены и оформить заказ на сдачу SHL тестирования. Мы оперативно отвечаем на заказы, консультируем обо всех нюансах и проходим shl тесты любого уровня сложности с абсолютной гарантией результата.
-				+e.actions.expand-block
-					+btn('b','Читать продолжение','_type-2 js-expand-btn')
-			//end pass
+					p Именно по этой причине большое количество талантливых сотрудников отсеивается на этапе этого сухого математического тестирования. Мы, будучи аспирантами с техническим складом ума, можем помочь в решении этой проблемы. Если Вы беспокоитесь за успешное прохождение SHL-тестов, то мы запросто пройдем SHL тесты за вас с 100% гарантией результата. Не ищите примеры теcтов SHL. В нашем арсенале уже имеется довольно большой послужной список сдачи SHL-тестирования для сотрудников самых разных компаний. Для успешного решения SHL тестов у нас есть не только необходимые знания, но и опыт.
+					p Прохождение SHL теста по работе теперь для вас не будет никакой проблемой и поводом для беспокойства. Стоит ли говорить, что если Вы не уверенны в своих силах, то лучше обратиться к тем, кто в них уверен. Ведь на кон поставлена Ваша успешная  карьера, а это очень серьезная ставка. Жизненные реалии таковы, что в ряде случаев выгоднее заказать сдачу SHL тестов или купить прохождение SHL теста, чем рисковать собственной карьерой. Цены на SHL тесты варьируются. Стоимость сдачи зависит от их вида: вербальные SHL тесты дешевле, числовые SHL тесты дороже. Для того чтобы пройти shl тесты для своей работы, вам нужно посмотреть цены и оформить заказ на сдачу SHL тестирования. Мы оперативно отвечаем на заказы, консультируем обо всех нюансах и проходим shl тесты любого уровня сложности с абсолютной гарантией результата.
 
-			//begin testimonials
-		+b.SECTION.testimonials#testimonials(style='background-image:url(img/bg/bg_particles-2.svg)')
+				+e.actions.expand-block
+					+btn('b', 'Читать продолжение', '_type-2 js-expand-btn')
+		//end pass
+
+		//begin testimonials
+		+b.SECTION.testimonials#testimonials(style='background-image: url(img/bg/bg_particles-2.svg)')
 			+e.IMG.decor.decor-img(src='img/decor/decor_5.svg' alt='image')
 			+e.container.container
-				+sectTitle('отзывы','Вот что о нас говорят наши клиенты','_center testimonials__title')
+				+sectTitle('отзывы', 'Вот что о нас говорят наши клиенты', '_center testimonials__title')
 				+e.slider.slider
 					-i = 0
 					while i < 2
@@ -344,7 +338,8 @@ block content
 									+i('left-quote')
 									| Олег Попов
 								+e.item-text.js-custom-scroll
-									p Старая работа вижила меня,как лимон. Хотелось просто выть.Решил найти новую, менее стрессовую. Но там необходимо было пройти SHL тест, а я к такому просто не готов. Благодарен Вашим специалистам, помогли! Результат просто супер.
+									p Старая работа выжала меня, как лимон. Хотелось просто выть. Решил найти новую, менее стрессовую. Но там необходимо было пройти SHL тест, а я к такому просто не готов. Благодарен Вашим специалистам, помогли! Результат просто супер.
+
 						+e.item.box-block
 							+e.item-date._color-2
 								+e.SPAN 14.07.18
@@ -353,32 +348,33 @@ block content
 									+i('left-quote')
 									| Елизавета Горянская
 								+e.item-text.js-custom-scroll
-									p Давно мечтала о хорошей должности в серйозном банке. Образование и опыт позволяли, однако на собеседовании сообщили что нужно пройти этот тест. Я никогда раньше с ним не сталкивалась. Времени учить самостоятельно не было, поэтому решила обратиться к Вам. Слелали все на высшем уровне. Спасибо! Давно мечтала о хорошей должности в серйозном банке. Образование и опыт позволяли, однако на собеседовании сообщили что нужно пройти этот тест. Я никогда раньше с ним не сталкивалась. Времени учить самостоятельно не было, поэтому решила обратится к Вам. Сделали все на высшем уровне. Спасибо!
+									p Давно мечтала о хорошей должности в серйоном банке. Образование и опыт позволяли, однако на собеседовании сообщили что нужно пройти этот тест. Я никогда раньше с ним не сталкивалась. Времени учить самостоятельно не было, поэтому решила обратиться к Вам. Сделали все на высшем уровне. Спасибо! Давно мечтала о хорошей должности в серйоном банке. Образование и опыт позволяли, однако на собеседовании сообщили что нужно пройти этот тест. Я никогда раньше с ним не сталкивалась. Времени учить самостоятельно не было, поэтому решила обратиться к Вам. Сделали все на высшем уровне. Спасибо!
+
 						+e.item.box-block
 							+e.item-date._color-3
 								+e.SPAN 05.07.18
 							+e.item-inner
 								+e.H6.item-title._color-3
 									+i('left-quote')
-									| Константин Багенский 
+									| Константин Багенский
 								+e.item-text.js-custom-scroll
-									p Заказал тесты, сделали быстро. Сервис у Вас на высшем уровне, что очень радует. Не ожидал такого, если честно. Отдельное спасибо Игорю за консультацию и за то, что объснил мне что нада зделать чтобы все прошло гладко. Очень рад сотрудничеству.
+									p Заказал тесты, сделали быстро. Сервис у Вас на высшем уровне, что очень радует. Не ожидал такого, если честно. Отдельное спасибо Игорю за консультацию и за то, что объяснил мне что нада зделать чтобы все прошло гладко. Очень рад сотрудничеству.
 						-i++
-				
+
 				+e.actions
-					+btn('b','Добавить отзыв','_type-2 testimonials__actions-btn','add-testimonial')
-		// end testimonials 
+					+btn('b', 'Добавить отзыв', '_type-2 testimonials__actions-btn', 'add-testimonial')
+		//end testimonials
 
 		//begin contact
 		+b.SECTION.contact#contact
 			+e.IMG.decor._1.decor-img(src='img/decor/decor_6.svg' alt='image')
 			+e.IMG.decor._2.decor-img(src='img/decor/decor_7.svg' alt='image')
-			+i('decor-triangle','contact__decor-triangle contact__decor-triangle_1')
-			+i('decor-triangle','contact__decor-triangle contact__decor-triangle_2')
+			+i('decor-triangle', 'contact__decor-triangle contact__decor-triangle_1')
+			+i('decor-triangle', 'contact__decor-triangle contact__decor-triangle_2')
 			+e.container.container
-				+sectTitle('Контакты','Остались вопросы?','_center _white contact__title','Пиши или заказывай решения SHL теста')
+				+sectTitle('Контакты', 'Остались вопросы?', '_center _white contact__title', 'Пиши или заказывай решение SHL теста')
 
-				+e.FORM.form.form(action="#!" method="POST")
+				+e.FORM.form.form(action='#!' method='POST')
 					+e.form-row.row
 						+e.form-field.form-field
 							+b.INPUT.form-field__input(type='text' name='' placeholder='Имя' required)
@@ -388,21 +384,8 @@ block content
 							+b.INPUT.form-field__input(type='text' name='' placeholder='Email...' required)
 					+e.TEXTAREA.form-textarea.textarea(placeholder='Ваше сообщение...' required)
 					+e.form-submit-wrap
-						+e.LABEL.form-submit-btn.form-submit-btn.btn_type-1 Отправить заявку
+						+e.LABEL.form-submit-btn.form-submit-btn.btn._type-1 Отправить заявку
 							+e.INPUT(type='submit')
-			//end contact
+		//end contact
+
 	//end main
-
-			
-
-
-
-
-
-			  	 
-
-						
-						
-
-	
-
